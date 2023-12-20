@@ -1,7 +1,7 @@
 require('dotenv').config();
 
 // import { NFTStorage, Blob } from 'nft.storage';
-import { NFTStorage, File, Blob } from 'https://cdn.skypack.dev/nft.storage';
+import { NFTStorage, File, Blob } from './node_modules/nft.storage';
 
 
 const fr = new FileReader();
