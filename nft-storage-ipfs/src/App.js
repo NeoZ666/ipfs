@@ -15,20 +15,20 @@ const App = () => {
       const fileCid = await client.storeBlob(fileBlob);
       console.log({ fileCid });
 
-      const metadata = await client.store({
-        metadata: {
-          name: "My NFT",
-          description: "My NFT Description",
-          file: fileCid,
-        },
-      });
-      console.log({ metadata });
+      // const metadata = await client.store({
+      //   metadata: {
+      //     name: "My NFT",
+      //     description: "My NFT Description",
+      //     file: fileCid,
+      //   },
+      // });
+      // console.log({ metadata });
 
-      const data = new Blob([JSON.stringify(metadata)]);
-      const { CAR } = await NFTStorage.encodeBlob(data);
-      const cid = await client.storeCAR(CAR);
-      console.log({ cid });
-      setCID(cid); // Update the state with the CID
+      // const data = new Blob([JSON.stringify(metadata)]);
+      // const { CAR } = await NFTStorage.encodeBlob(data);
+      // const cid = await client.storeCAR(CAR);
+      // console.log({ cid });
+      setCID( fileCid ); 
     };
   }
 
